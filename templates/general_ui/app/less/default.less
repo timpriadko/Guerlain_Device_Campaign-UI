@@ -1,0 +1,225 @@
+@import url(./mixin.less);
+
+@font-face {
+	font-family: 'Futura Now Text';
+	src: url('../fonts/Futura_Now_Text/FuturaNowText.woff');
+	src: local('Futura Now Text'), local('Futura_Now_Text'),
+		url('../fonts/Futura_Now_Text/FuturaNowText.woff') format('woff'),
+		url('../fonts/Futura_Now_Text/FuturaNowText.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Futura Now Text';
+	src: url('../fonts/Futura_Now_Text/FuturaNowTextMedium.woff');
+	src: local('Futura Now Text'), local('Futura_Now_Text'),
+		url('../fonts/Futura_Now_Text/FuturaNowTextMedium.woff') format('woff'),
+		url('../fonts/Futura_Now_Text/FuturaNowTextMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Futura Now Text';
+	src: url('../fonts/Futura_Now_Text/FuturaNowTextBold.woff');
+	src: local('Futura Now Text'), local('Futura_Now_Text'),
+		url('../fonts/Futura_Now_Text/FuturaNowTextBold.woff') format('woff'),
+		url('../fonts/Futura_Now_Text/FuturaNowTextBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kozuka Gothic Pro';
+	src: url('../fonts/KozGoPro/KozGoPro-Regular.woff');
+	src: local('Kozuka Gothic Pro'), local('Kozuka Gothic Pro'),
+		url('../fonts/KozGoPro/KozGoPro-Regular.woff') format('woff'),
+		url('../fonts/KozGoPro/KozGoPro-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kozuka Gothic Pro';
+	src: url('../fonts/KozGoPro/KozGoPro-Medium.woff');
+	src: local('Kozuka Gothic Pro'), local('Kozuka Gothic Pro'),
+		url('../fonts/KozGoPro/KozGoPro-Medium.woff') format('woff'),
+		url('../fonts/KozGoPro/KozGoPro-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kozuka Gothic Pro';
+	src: url('../fonts/KozGoPro/KozGoPro-Bold.woff');
+	src: local('Kozuka Gothic Pro'), local('Kozuka Gothic Pro'),
+		url('../fonts/KozGoPro/KozGoPro-Bold.woff') format('woff'),
+		url('../fonts/KozGoPro/KozGoPro-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+// fonts
+@base_font: 'Futura Now Text', sans-serif;
+@secondary_font: 'Futura Now Text', sans-serif;
+@jp_font_1: 'Kozuka Gothic Pro', sans-serif;
+
+// colors
+@black: #000;
+@main_black: #000;
+@orange: #d56727;
+@gray: #d1d1d1;
+@gray_2: #E4E4E4;
+@white: #fff;
+
+html {
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  font-size: 14px;
+}
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::selection {
+    background: #e8334d;
+    color: #fff;
+  }
+}
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  line-height: 100%;
+  .transition;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+p {
+  & + p {
+    margin-top: 20px;
+  }
+  &.big {
+    font-size: 20px;
+  }
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+}
+input {
+  appearance: none;
+  
+  ::-webkit-input-placeholder {
+    color: #000;
+  }
+  ::-moz-placeholder {
+    color: #000;
+  }
+  :-moz-placeholder {
+    color: #000;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+  }
+}
+input:not([type='submit']) {
+  width: 100%;
+  min-height: 76px;
+  padding: 0 25px;
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  display: block;
+  border-radius: 38px;
+  letter-spacing: -0.2px;
+}
+label {
+  text-align: center;
+  display: block;
+  font-size: 19px;
+  letter-spacing: 0.32px;
+  line-height: 70px;
+
+  input {
+    display: none !important;
+  }
+}
+textarea {
+  max-width: 100%;
+  outline: none;
+  display: block;
+  padding: 15px 0;
+  min-height: 178px;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+}
+strong {
+  font-weight: 700;
+}
+.bold {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+.KozGoPro {
+  font-family: @jp_font_1 !important;
+  line-height: 140%;
+}
